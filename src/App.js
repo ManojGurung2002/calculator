@@ -1,4 +1,4 @@
-import { calculateNewValue } from '@testing-library/user-event/dist/utils';
+
 import { useState } from 'react';
 import './App.css';
 
@@ -56,17 +56,17 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="fi-App">
 
-      <div className="calculator">
+      <div className="fi-calculator">
 
-        <div className="display">
+        <div className="fi-display">
           {result ? <span>({result})</span> : ''} 
           &nbsp;
           {calc || "0"}
         </div>
 
-        <div className='operators'>
+        <div className='fi-operators'>
           <button onClick={() => updateCalc('/')}>/</button>
           <button onClick={() => updateCalc('*')}>*</button>
           <button onClick={() => updateCalc('+')}>+</button>
@@ -76,7 +76,7 @@ function App() {
 
         </div>
 
-        <div className='digits'>
+        <div className='fi-digits'>
           {createDigits()}
           <button onClick={() => updateCalc('0')}>0</button>
           <button onClick={() => updateCalc('.')}>.</button>
